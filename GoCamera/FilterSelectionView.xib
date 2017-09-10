@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FilterSelectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFe-Ii-dl4">
+                    <rect key="frame" x="0.0" y="90" width="375" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIO-mE-LRh">
+                            <rect key="frame" x="179" y="7" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="0Zx-DX-JDh"/>
+                                <constraint firstAttribute="width" constant="16" id="6m8-VI-5iC"/>
+                            </constraints>
+                            <state key="normal" image="icon_showtag"/>
+                            <connections>
+                                <action selector="dismissAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xWu-xX-tKI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="MIO-mE-LRh" firstAttribute="centerX" secondItem="PFe-Ii-dl4" secondAttribute="centerX" id="PSR-bv-PE2"/>
+                        <constraint firstAttribute="height" constant="30" id="dP5-dP-B9v"/>
+                        <constraint firstItem="MIO-mE-LRh" firstAttribute="centerY" secondItem="PFe-Ii-dl4" secondAttribute="centerY" id="gUn-wX-jsY"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Zr1-dF-zLt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Kdd-Z0-b7n">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zr1-dF-zLt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4gh-bj-GOk"/>
+                <constraint firstItem="PFe-Ii-dl4" firstAttribute="top" secondItem="Zr1-dF-zLt" secondAttribute="bottom" id="C2f-ct-9Jn"/>
+                <constraint firstItem="Zr1-dF-zLt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="KbX-9C-drf"/>
+                <constraint firstAttribute="bottom" secondItem="PFe-Ii-dl4" secondAttribute="bottom" id="jIv-gW-tFx"/>
+                <constraint firstAttribute="trailing" secondItem="Zr1-dF-zLt" secondAttribute="trailing" id="qz4-WN-VFF"/>
+                <constraint firstItem="PFe-Ii-dl4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="u64-TU-3Ym"/>
+                <constraint firstAttribute="trailing" secondItem="PFe-Ii-dl4" secondAttribute="trailing" id="ukj-co-t5C"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="Zr1-dF-zLt" id="z2k-0G-QEN"/>
+            </connections>
+            <point key="canvasLocation" x="74.5" y="108"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_showtag" width="16" height="16"/>
+    </resources>
+</document>

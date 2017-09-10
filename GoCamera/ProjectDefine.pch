@@ -1,0 +1,43 @@
+//
+//  ProjectDefine.pch
+//  GoCamera
+//
+//  Created by meitu on 2017/3/16.
+//  Copyright © 2017年 meitu. All rights reserved.
+//
+
+
+// 定义系统版本比对方法
+#define COMPARE_SYSTEM_VERSION(v)                   ([[[UIDevice currentDevice] systemVersion] compare:(v) options:NSNumericSearch])
+#define SYSTEM_VERSION_EQUAL_TO(v)                  (COMPARE_SYSTEM_VERSION(v) == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              (COMPARE_SYSTEM_VERSION(v) == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  (COMPARE_SYSTEM_VERSION(v) != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 (COMPARE_SYSTEM_VERSION(v) == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     (COMPARE_SYSTEM_VERSION(v) != NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO_7_0 (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO_8_0 (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
+
+
+#define UIViewAutoresizingWidthAndHeight       UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight
+#define UIViewAutoresizingAll               UIViewAutoresizingFlexibleLeftMargin| \
+UIViewAutoresizingFlexibleWidth|\
+UIViewAutoresizingFlexibleRightMargin|\
+UIViewAutoresizingFlexibleTopMargin|\
+UIViewAutoresizingFlexibleHeight|\
+UIViewAutoresizingFlexibleBottomMargin
+
+#define RGB(r,g,b)        [UIColor colorWithRed:r / 255.f green:g / 255.f blue:b / 255.f alpha:1.f]
+#define RGBA(r,g,b,a)     [UIColor colorWithRed:r / 255.f green:g / 255.f blue:b / 255.f alpha:a]
+#define RGBAHEX(hex,a)    RGBA((float)((hex & 0xFF0000) >> 16),(float)((hex & 0xFF00) >> 8),(float)(hex & 0xFF),a)
+
+#define IMAGENAMED(file)            [UIImage imageNamed:file]
+
+//屏幕尺寸
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//屏幕UI常规设定
+#define kButtonClickWidth 40
+#define kBeautyMainBottomHeight 50
+#define kBeautyMainBottomButtonStartTag 11020
+
